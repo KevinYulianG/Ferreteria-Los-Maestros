@@ -16,6 +16,11 @@
 </p>
 
 <p align="center">
+  <a href="https://ferreteria-maestros.duckdns.org"><b>🌐 Ver demo en vivo</b></a> · AWS EC2 + Docker + HTTPS<br>
+  <sub>Disponible mientras el entorno de AWS Academy está activo.</sub>
+</p>
+
+<p align="center">
   <img src="docs/capturas/catalogo.png" alt="Catálogo de la tienda" width="49%">
   <img src="docs/capturas/panel-inventario.png" alt="Panel de administración: inventario" width="49%">
 </p>
