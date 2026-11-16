@@ -1,4 +1,36 @@
-# 🔨 Ferretería Los Maestros
+<h1 align="center">🔨 Ferretería Los Maestros</h1>
+
+<p align="center">
+  E-commerce fullstack con <b>React</b> y <b>microservicios Spring Boot</b>, seguridad con <b>JWT</b>, <b>MySQL</b> y despliegue con <b>Docker</b>.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React 19">
+  <img src="https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=white" alt="Java 17">
+  <img src="https://img.shields.io/badge/Spring%20Boot-4.1-6DB33F?logo=springboot&logoColor=white" alt="Spring Boot">
+  <img src="https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/JWT-auth-000000?logo=jsonwebtokens&logoColor=white" alt="JWT">
+  <img src="https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white" alt="Docker">
+  <img src="https://img.shields.io/badge/tests-156%20passing-brightgreen" alt="Pruebas">
+</p>
+
+<p align="center">
+  <img src="docs/capturas/catalogo.png" alt="Catálogo de la tienda" width="49%">
+  <img src="docs/capturas/panel-inventario.png" alt="Panel de administración: inventario" width="49%">
+</p>
+
+### Destacado
+
+- **3 microservicios** independientes (usuarios, catálogo y ventas), cada uno con su propia base de datos MySQL.
+- **Autenticación JWT con refresh token** y autorización por rol (Administrador, Vendedor, Cliente) validada en cada servicio.
+- **Comunicación entre servicios** segura: ms-ventas descuenta stock en ms-catálogo con un token de servicio propio.
+- **Arquitectura en capas** (controller, service, repository, DTO, mapper) con validación y manejo global de errores.
+- **API REST versionada** (`/api/v1`) y documentada con **Swagger**.
+- **156 pruebas automatizadas**: JUnit + Mockito en el backend y Vitest + Testing Library en el frontend.
+- **Un comando para levantar todo** con Docker Compose (MySQL, 3 microservicios y el front con Nginx).
+
+---
 
 Plataforma web de comercio electrónico para **Ferretería Los Maestros**, una ferretería de **La Serena, Región de Coquimbo**. Permite explorar el catálogo de productos, comprar en línea con retiro en tienda o despacho a domicilio, consultar las zonas de cobertura y administrar productos, pedidos y usuarios desde un panel con roles.
 
@@ -19,6 +51,7 @@ Plataforma web de comercio electrónico para **Ferretería Los Maestros**, una f
 - [Cómo ejecutar el proyecto](#-cómo-ejecutar-el-proyecto) (local o con Docker)
 - [Flujo de trabajo con Git](#-flujo-de-trabajo-con-git)
 - [Estado del proyecto](#-estado-del-proyecto)
+- [Créditos](#-créditos)
 
 ---
 
@@ -330,6 +363,18 @@ En Docker, Nginx cumple el papel del proxy de Vite: sirve el front y envía cada
 - [x] Pruebas unitarias: 36 en `ms-usuarios`, 18 en `ms-catalogo`, 25 en `ms-ventas` y 77 en el frontend
 - [x] `docker-compose.yml` con MySQL, los 3 microservicios y el front servido por Nginx
 - [x] Documentación de APIs e integración (Anexos 2 y 3), manual de usuario (Anexo 4) y planilla de requisitos
+
+---
+
+## 🙌 Créditos
+
+Proyecto desarrollado en equipo para la asignatura DSY1104 – Desarrollo Fullstack II (Duoc UC, 2026):
+
+- **Kevin González** ([@KevinYulianG](https://github.com/KevinYulianG)): frontend y `ms-catalogo`
+- **Diego Jiménez** ([@diego09090909](https://github.com/diego09090909)): frontend y `ms-usuarios`
+- **José Sánchez**: `ms-ventas`
+
+Repositorio original del equipo: [diego09090909/Ferreter-a---Los-Maestros](https://github.com/diego09090909/Ferreter-a---Los-Maestros).
 
 ---
 
